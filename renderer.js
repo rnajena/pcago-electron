@@ -77,7 +77,7 @@ function start_rsession() {
         rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_linux.R')]);
     }
     else if(remote.process.platform == "win32") {
-        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_win64.R')]); //TODO start correct R
+        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_win32.R')]); //TODO start correct R
     }
     else {
         pcago_log = "Platform " + remote.process.platform + " not supported!";
