@@ -73,7 +73,18 @@ function setPCAGOUrl(url) {
 function start_rsession() {
 
     // start R with PCAGO
-    rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter.R')]);
+    if(remote.process.platform == "linux") {
+        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_linux.R')]);
+    }
+    else if(remote.process.platform == "win32") {
+        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_windows.R')]); //TODO
+    }
+    else {
+        pcago_log = "Platform " + remote.process.platform + " not supported!";
+        switchToUI(uistates.error);
+        return;
+    }
+
 
     rsession_process.stdout.on('data', (data) => {
         message = new TextDecoder("utf-8").decode(data);
