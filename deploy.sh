@@ -8,7 +8,7 @@ mkdir -p $target_dir
 echo "Target directory $target_dir"
 
 # Copy all relevant files
-cp -r node_modules "$target_dir/node_modules"
+cp -r node_modules $target_dir
 
 for f in $(git ls-tree -r master --name-only); do
     cp -r --parents $f $target_dir
