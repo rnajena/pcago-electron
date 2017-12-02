@@ -74,10 +74,10 @@ function start_rsession() {
 
     // start R with PCAGO
     if(remote.process.platform == "linux") {
-        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_linux.R')]);
+        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_linux.R'), path.join(__dirname, 'pcago')]);
     }
     else if(remote.process.platform == "win32") {
-        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_win32.R')]); //TODO start correct R
+        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_win32.R'), path.join(__dirname, 'pcago')]); //TODO start correct R
     }
     else {
         pcago_log = "Platform " + remote.process.platform + " not supported!";

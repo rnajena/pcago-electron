@@ -25,7 +25,8 @@ body {
 
 .parent > div > div {
     width: 50%;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
 }
 
 #loading-ui .logo {
