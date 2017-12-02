@@ -19,7 +19,7 @@ Download the appropriate version and run the included starter or just `electron.
 PCAGO-Electron requires PCAGO that has to be placed into the `pcago` folder.
 If you are cloning the repository, you can run:
 ```
-git clone --recursive https://gitlab.com/rumangerst/pcago-electron.git
+git clone --recursive https://github.com/rumangerst/pcago-electron.git
 ```
 
 If you already cloned the PCAGO-Electron repository, you can let git automatically
