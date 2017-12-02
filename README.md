@@ -4,9 +4,13 @@ PCAGO-Electron
 Runs [PCAGO](https://gitlab.com/rumangerst/pcago) as standalone desktop application
 using the [Electron](https://electronjs.org/) framework. 
 
+## Download
+
+You can find prepackaged versions of PCAGO-Electron [here](https://github.com/rumangerst/pcago-electron/releases).
+
 ## Running
 
-We provide prepacked versions of PCAGO-Electron that you can download [here](Insert link).
+We provide prepacked versions of PCAGO-Electron that you can download [here](https://github.com/rumangerst/pcago-electron/releases).
 Download the appropriate version and run the included starter or just `electron.exe` (Windows)
 / `./electron` (Linux).
 
