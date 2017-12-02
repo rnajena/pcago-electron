@@ -10,7 +10,7 @@ print("PCAGO starter is ready!")
 ffmpeg.path <- "/usr/bin/ffmpeg"
 if(!file.exists(ffmpeg.path)) {
     print("Using static build of ffmpeg.")
-    ffmpeg.path <- "../ffmpeg-linux/ffmpeg"
+    ffmpeg.path <- "../ffmpeg-linux-x64/ffmpeg"
 }
 if(!file.exists(ffmpeg.path)) {
     print("ffmpeg does not exist!")
