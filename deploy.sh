@@ -23,7 +23,18 @@ cp -r $target_dir/* "$target_dir_linux/resources/app"
 cp -r electron-linux-x64/* $target_dir_linux
 cp -r ffmpeg-linux-x64 $target_dir_linux/resources/app
 
+cat << 'EOF' >> "$target_dir_linux/run.sh"
+#!/bin/bash
+./electron
+EOF
+
+chmod +x "$target_dir_linux/run.sh"
+
 cd $target_dir_linux
 rm $current_dir/pcago_electron_linux-x64.zip
 zip -r $current_dir/pcago_electron_linux-x64.zip .
 cd $current_dir
+
+# Clear tmp
+rm -r $target_dir
+rm -r $target_dir_linux
