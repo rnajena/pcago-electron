@@ -4,7 +4,7 @@
 // // Module to create native browser window.
 // const BrowserWindow = electron.BrowserWindow;
 
-const {app, Menu, BrowserWindow} = require('electron')
+const {app, Menu, BrowserWindow} = require('electron');
 
 const path = require('path');
 const URL = require('url');
@@ -22,19 +22,27 @@ let mainWindow = null;
 
 menu_new = function(menuItem, currentWindow) {
     currentWindow.webContents.send("menu_new");
-}
+};
 
 menu_exit = function(menuItem, currentWindow) {
     currentWindow.close();
-}
+};
 
 menu_report_issue = function(menuItem, currentWindow) {
     require('electron').shell.openExternal("https://gitlab.com/rumangerst/pcago/issues");
-}
+};
 
 menu_report_source_code = function(menuItem, currentWindow) {
     require('electron').shell.openExternal("https://gitlab.com/rumangerst/pcago");
-}
+};
+
+menu_show_devtools = function(menuItem, currentWindow) {
+    currentWindow.webContents.openDevTools();
+};
+
+menu_open_browser = function(menuItem, currentWindow) {
+    currentWindow.webContents.send("menu_open_browser");
+};
 
 const menu_template = [
     {
@@ -45,13 +53,20 @@ const menu_template = [
         ]
     },
     {
+        label : "Tools",
+        submenu : [
+            { label : "Open developer console", role : "show_devtools", click : menu_show_devtools },
+            { label : "Open PCAGO in browser", role : "open_browser", click : menu_open_browser }
+        ]
+    },
+    {
         label : "Help",
         submenu : [
             { label : "Report issue", role : "report_issue", click : menu_report_issue },
             { label : "Source code", role : "website", click : menu_report_source_code }
         ]
     }
-]
+];
 
 function createWindow() {
     // Create the browser window.
@@ -79,7 +94,7 @@ function createWindow() {
     mainWindow.$ = mainWindow.jQuery = require('jquery');
 
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {

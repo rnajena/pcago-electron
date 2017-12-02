@@ -18,6 +18,14 @@ var current_uistate = null;
 
 function updateLoadingStatusMessage(message) {
     if(message.trim().length > 0) {
+
+        if(message.indexOf("The following object is masked from") > -1) {
+            return;
+        }
+        if(message.indexOf("The following objects are masked from") > -1) {
+            return;
+        }
+
         document.getElementById("status").textContent = message;
     }
 }
@@ -113,6 +121,12 @@ webview.addEventListener("dom-ready", () => {
 ipcRenderer.on("menu_new", function(event, data) {
     if(rsession_process != null && pcago_url != null && current_uistate == uistates.pcago) {
         webview.reload();
+    }
+});
+
+ipcRenderer.on("menu_open_browser", function(event, data) {
+    if(rsession_process != null && pcago_url != null && current_uistate == uistates.pcago) {
+        require('electron').shell.openExternal(pcago_url);
     }
 });
 
