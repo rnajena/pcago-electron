@@ -8,6 +8,17 @@ using the [Electron](https://electronjs.org/) framework.
 
 You can find prepackaged versions of PCAGO-Electron [here](https://github.com/rumangerst/pcago-electron/releases).
 
+Following versions are available:
+
+* Minimal: Only contains Electron.
+* Standard: Contains Electron and ffmpeg
+* Ubuntu: Contains Electron, ffmpeg and compiled dependencies for Ubuntu 16.04 LTS (with R 3.4.3)
+
+If a version does *not* contain compiled dependencies, PCAGO-Electron will automatically compile 
+the dependencies on first start. Please check if all required packages are installed.
+Compilation will take a couple of minutes. The compiled dependencies can be re-used on other computers with the 
+same operating system.
+
 ## Requirements
 
 * libgconf2 (Debian/Ubuntu: libgconf2-4)
