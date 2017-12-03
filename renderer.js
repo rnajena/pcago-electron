@@ -74,7 +74,8 @@ function start_rsession() {
 
     // start R with PCAGO
     if(remote.process.platform == "linux") {
-        rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_linux.R'), path.join(__dirname, 'pcago')]);
+        //rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_linux.R'), path.join(__dirname, 'pcago')]);
+        rsession_process = spawn('bash', [path.join(__dirname, 'pcago_starter_linux.sh'), path.join(__dirname, 'pcago')]);
     }
     else if(remote.process.platform == "win32") {
         rsession_process = spawn('Rscript', ["--vanilla", path.join(__dirname, 'pcago_starter_win32.R'), path.join(__dirname, 'pcago')]); //TODO start correct R

@@ -2,11 +2,17 @@ PCAGO-Electron
 ================
 
 Runs [PCAGO](https://gitlab.com/rumangerst/pcago) as standalone desktop application
-using the [Electron](https://electronjs.org/) framework. 
+using the [Electron](https://electronjs.org/) framework.
 
 ## Download
 
 You can find prepackaged versions of PCAGO-Electron [here](https://github.com/rumangerst/pcago-electron/releases).
+
+## Requirements
+
+* libgconf2 (Debian/Ubuntu: libgconf2-4)
+* curl (Debian/Ubuntu: libcurl4-openssl-dev)
+* Dependencies that are required by [PCAGO](https://gitlab.com/rumangerst/pcago)
 
 ## Running
 
@@ -32,12 +38,12 @@ git submodule update --init --recursive
 
 To run PCAGO-Electron from source, you need [npm](https://www.npmjs.com/).
 Run `npm start` in the PCAGO-Electron folder to run the application.
-If you use Linux, you should install `ffmpeg` (with MP4 support) from your 
+If you use Linux, you should install `ffmpeg` (with MP4 support) from your
 distribution's package sources. Otherwise you need to download a build of `ffmpeg` for
 Linux and place it into the `ffmpeg-linux-x64` directory (see README file within this folder).
 
 ## Deploying PCAGO-Electron
 
-To create prepacked versions of PCAGO-Electron, run `./deploy.sh`. This requires distributable versions of 
+To create prepacked versions of PCAGO-Electron, run `./deploy.sh`. This requires distributable versions of
 Electron (electron-* directories), ffmpeg (ffmpeg-*) and R (R-*). See the respective README files for
 more information.
