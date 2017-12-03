@@ -115,6 +115,14 @@ function start_rsession() {
 
         switchToUI(uistates.error);
     });
+
+    rsession_process.on('error', (error) => {
+        app_console.log(`Error while starting R session: ${error}`);
+        message = `Error while starting R session: ${error}`;
+        pcago_log += message;
+
+        switchToUI(uistates.error);
+    });
 }
 
 remote.getCurrentWindow().on("close", () => {
