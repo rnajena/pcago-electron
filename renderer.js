@@ -26,6 +26,13 @@ function updateLoadingStatusMessage(message) {
             return;
         }
 
+        if(message.indexOf("[1/") > -1) {
+            document.getElementById("progress").textContent = "Installing dependencies ...";
+        }
+        else if(message.indexOf("[3/") > -1) {
+            document.getElementById("progress").textContent = "Starting PCAGO ...";
+        }
+
         document.getElementById("status").textContent = message;
     }
 }

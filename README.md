@@ -11,7 +11,6 @@ You can find prepackaged versions of PCAGO-Electron [here](https://github.com/ru
 ## Requirements
 
 * libgconf2 (Debian/Ubuntu: libgconf2-4)
-* curl (Debian/Ubuntu: libcurl4-openssl-dev)
 * Dependencies that are required by [PCAGO](https://gitlab.com/rumangerst/pcago)
 
 ## Running
