@@ -59,3 +59,16 @@ Linux and place it into the `ffmpeg-linux-x64` directory (see README file within
 To create prepacked versions of PCAGO-Electron, run `./deploy.sh`. This requires distributable versions of
 Electron (electron-* directories), ffmpeg (ffmpeg-*) and R (R-*). See the respective README files for
 more information.
+
+## Used libraries/software
+
+PCAGO-Electron uses and distributes [Electron](https://electronjs.org/) (Licensed under [MIT](https://github.com/electron/electron/blob/master/LICENSE))
+and various dependency libraries located in `node_modules`. See the `license` file located each of the subfolders
+for license information. 
+PCAGO-Electron distributes [static ffmpeg builds](https://www.johnvansickle.com/ffmpeg/) licensed under 
+[GPL-v3](http://www.gnu.org/licenses/gpl-3.0.en.html) and [ffmpeg for Windows](http://ffmpeg.zeranoe.com/builds/)
+licensed under [GPL](http://www.gnu.org/licenses/).
+Also included are sources of dependencies required by R that are located in `resources/app/pcago/packrat/src`.
+See `resources/app/pcago/packrat/src/README` for information about their licenses.
+
+The code and binary distribution of mentioned software belongs to their respective authors.
