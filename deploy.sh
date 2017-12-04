@@ -14,6 +14,9 @@ for f in $(git ls-tree -r master --name-only); do
     cp -r --parents $f $target_dir
 done
 
+# Clean up unwanted packrat files
+rm -r $target_dir/pcago/packrat/lib*
+
 # Distribution for linux
 target_dir_linux=$(mktemp -d)
 echo "Target directory for linux $target_dir_linux"
