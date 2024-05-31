@@ -1,14 +1,18 @@
+:warning: The PCAGO and PCAGO-Electon repositories have been merged and are available here:
+
+https://github.com/rnajena/pcago-unified
+
 PCAGO-Electron
 ================
 
-Runs [PCAGO](https://gitlab.com/rumangerst/pcago) as standalone desktop application
+Runs [PCAGO](https://gitlab.com/rnajena/pcago) as standalone desktop application
 using the [Electron](https://electronjs.org/) framework.
 
-[PCAGO on GitHub](https://github.com/rumangerst/pcago-electron) | [PCAGO-Electron on GitHub](https://github.com/rumangerst/pcago-electron/)
+[PCAGO on GitHub](https://github.com/rnajena/pcago) | [PCAGO-Electron on GitHub](https://github.com/rnajena/pcago-electron/)
 
 ## Download
 
-You can find prepackaged versions of PCAGO-Electron [here](https://github.com/rumangerst/pcago-electron/releases).
+You can find prepackaged versions of PCAGO-Electron [here](https://github.com/rnajena/pcago-electron/releases).
 
 Following versions are available:
 
@@ -24,11 +28,11 @@ same operating system.
 ## Requirements
 
 * libgconf2 (Debian/Ubuntu: libgconf2-4)
-* Dependencies that are required by [PCAGO](https://gitlab.com/rumangerst/pcago)
+* Dependencies that are required by [PCAGO](https://gitlab.com/rnajena/pcago)
 
 ## Running
 
-We provide prepacked versions of PCAGO-Electron that you can download [here](https://github.com/rumangerst/pcago-electron/releases).
+We provide prepacked versions of PCAGO-Electron that you can download [here](https://github.com/rnajena/pcago-electron/releases).
 Download the appropriate version and run the included starter or just `electron.exe` (Windows)
 / `./electron` (Linux).
 
@@ -37,7 +41,7 @@ Download the appropriate version and run the included starter or just `electron.
 PCAGO-Electron requires PCAGO that has to be placed into the `pcago` folder.
 If you are cloning the repository, you can run:
 ```
-git clone --recursive https://github.com/rumangerst/pcago-electron.git
+git clone --recursive https://github.com/rnajena/pcago-electron.git
 ```
 
 If you already cloned the PCAGO-Electron repository, you can let git automatically
